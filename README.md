@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rails Starter Template is a ready bundled gems for rail. Installed gems are:
 
-Things you may want to cover:
+```
+gem 'bootstrap-sass'
+gem 'devise'
+gem 'simple_form'
+gem 'font-awesome-sass'
+gem 'country_select'
+gem 'cloudinary'
+gem 'carrierwave'
+gem 'cancancan'
+gem 'rolify'
+gem 'record_tag_helper', '~> 1.0'
+gem 'geocoder'
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
