@@ -7,7 +7,13 @@
     <p>By:Ali</p>
     <p class="lead">
       <a class="btn btn-primary btn-lg" href="/profiles/new" role="button">Create Profile</a>
+      <br>
+      <a class="btn btn-primary btn-lg" href="/posts/new" role="button">Add Post</a>
     </p>
   </div>
-
 </div>
+<% @posts.each do |post|%>
+<p>post.title</p>
+<p>post.user.email</p>
+<p>image_tag(post.image)</p>
+<%end%>
