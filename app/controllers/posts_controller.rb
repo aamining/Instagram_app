@@ -4,7 +4,12 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    # to be able to see JUST current user posts
+    # current_user is not nil if they've signed in with devise
+    puts "current_user is: #{current_user.inspect}"
+    # @posts = Post.all
+    @current_user_posts = Post.where(user_id: current_user.id)
+    puts "@current_user_posts is: #{@current_user_posts.inspect}"
   end
 
   # GET /posts/1
