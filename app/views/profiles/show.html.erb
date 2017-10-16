@@ -20,11 +20,8 @@
   <%= @profile.gender %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @profile.user %>
-</p>
 
+<p> <%=image_tag(@profile.picture, width: "50%", height: "50%")%> </p>
 
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
