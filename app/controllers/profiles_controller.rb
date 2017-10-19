@@ -4,7 +4,33 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    @profiles = Profile.all
+
+    # @profile = Profile.where(user_id: current_user.id).first
+    @profile = Profile.find_by(user_id: current_user.id)
+    # these above two lines work in same
+    
+    # there is difference between .where and .find_by and .find methodes
+    # .where return an array. to be able to read this array we need to a loop (eg. each loop) or .first .last or [0] methodes
+    # .find_by return the first object found.
+    # . find  return the object the object we are looking for
+
+    # example:
+    # Person table
+    #  id| name
+    #   1|  luke
+    #   2|  Mathew
+    #   3|  Ali
+    #   4|  luke
+    #   5| Ali
+    #   6| Ali
+
+    # person.find (id:1)  return luke
+    # Person.find_by (first_name:"ALi") returen ALi just for id: 3
+    # person.where(first_name:"ali") return [Ali,ALi,ALi]
+
+    # more information :
+    # http://guides.rubyonrails.org/active_record_querying.html
+
   end
 
   # GET /profiles/1

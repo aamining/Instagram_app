@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     # to be able to see JUST current user posts
     # current_user is not nil if they've signed in with devise
     # puts "current_user is: #{current_user}"
-    @posts = Post.all ## TURN THIS CODE ACTIVE AND OTHER CODES INACTIVE TO SEE ALL POSTS. ALSO IN VIEWS>POSTS>INDEX CHANGE THE @CURRENT_USER_POSTS TO @POSTS.
+    @posts = Post.all ## TURN THIS CODE ACTIVE AND OTHER CODES INACTIVE TO SEE ALL POSTS. ALSO IN VIEWS>POSTS>INDEX CHANGE THE @CURRENT_USER_POSTS TO @posts.
     #Applying database Query here in Post controller
     # http://guides.rubyonrails.org/active_record_querying.html
     # @current_user_posts = Post.where(user_id: current_user.id)

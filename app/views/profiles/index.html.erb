@@ -15,22 +15,29 @@
   </thead>
 
   <tbody>
-    <% @profiles.each do |profile| %>
-      <tr>
-        <td><%= profile.name %></td>
-        <td><%= profile.username %></td>
-        <td><%= profile.age %></td>
-        <td><%= profile.gender %></td>
-        <td><%= profile.user %></td>
-        <td><%= link_to 'Show', profile %></td>
-        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Post', new_post_path %></td>
-      </tr>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
+          <div class="thumbnail">
+            <div class="caption">
 
-      <td><%=image_tag(profile.picture)%></td>
-    <% end %>
+              <td><%=image_tag(@profile.picture)%></td>
+              <td><%= @profile.name %></td>
+              <td><%= @profile.username %></td>
+              <td><%= @profile.age %></td>
+              <td><%= @profile.gender %></td>
+              <td><%= @profile.user %></td>
 
+
+              <td><%= link_to 'Show', profile_path(@profile.id) %></td>
+              <!-- (@profile.id) is showing how to show :id mentioned in routes in oue link path -->
+              <td><%= link_to 'Edit', edit_profile_path(@profile.id) %></td>
+              <td><%= link_to 'Destroy', profile_path(@profile.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </tbody>
 </table>
 
