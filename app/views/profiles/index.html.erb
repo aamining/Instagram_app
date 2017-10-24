@@ -30,7 +30,7 @@
 
 
               <td><%= link_to 'Show', profile_path(@profile.id) %></td>
-              <!-- (@profile.id) is showing how to show :id mentioned in routes in oue link path -->
+              <!-- (@profile.id) is showing how to show :id mentioned in routes in our link path -->
               <td><%= link_to 'Edit', edit_profile_path(@profile.id) %></td>
               <td><%= link_to 'Destroy', profile_path(@profile.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </div>
