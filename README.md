@@ -30,3 +30,9 @@ some other useful information like:
     # puts "@current_user_posts is: #{@current_user_posts.inspect}"
 
 ```
+# Where, Find and Find_by 
+
+look in to :      app/controllers/profiles_controller.rb
+
+and read the follwing instruction to find the difference beteween 'where','find' and 'find_by'
+
